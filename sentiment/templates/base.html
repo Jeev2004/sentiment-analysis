@@ -1,0 +1,38 @@
+{% extends 'index.html' %}
+{% block content %}
+
+<div  style=" color: #fffafa;
+font-size: 30px ;
+position: fixed;
+top: 610px;">Review type :
+    {% if a == 1 %}
+    <div class="pos"style="color: beige;
+    font-size: 15px ;
+    position:fixed;
+    left: 30em;
+    top: 610px;
+    padding: 15px 30px 15px;
+    background-color: #78b07c;
+    border-radius: 10%;">Positive</div>
+    {% elif a == 3 %}
+    <div class="neu" style="color: rgb(9, 9, 5);
+    font-size: 15px ;
+    position: fixed;
+    left: 40em;
+    top: 610px;
+    padding: 15px 30px 15px;
+    background-color: #dcea85;
+    border-radius: 10%;"> Neutral</div>
+    {%  else  %}
+    <div class="neg" style=" color: beige;
+    font-size: 15px ;
+    position: fixed;
+    left: 50em;
+    top: 610px;
+    padding: 15px 30px 15px;
+    background-color: #cf7373;
+    border-radius: 10%;">Negative</div>
+</div>
+
+{% endif %}
+{% endblock %}

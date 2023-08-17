@@ -1,0 +1,29 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css\style.css'%}">
+    <title>Sentiment analysis</title>
+</head>
+<body>
+    <div class="hd"><h1>The Reviewer . </h1></div>
+    <div class="Wrapper">
+        <h1 class="Title">Enter your reviews here!</h1>
+        <div class="Input">
+          
+          <form method="post">
+            {% csrf_token %}
+          <input type="text" id="input" class="Input-text" placeholder="The Product was ..." name="text" for="text"></div>
+          <div class="button-borders">
+            <button class="buttons"> SUBMIT </button>
+          </div>
+        </form>
+          {% block content %}
+          {% endblock %}
+    </div>
+</body>
+</html>
